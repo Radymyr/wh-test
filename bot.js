@@ -13,7 +13,7 @@ fastify.post('/webhook', async (req, replay) => {
   replay.status(200).send('success');
 });
 
-const startServer = async () => {
+const startServer = async (request, replay) => {
   await fastify.ready();
   fastify.server.emit('request', request, replay);
 };
