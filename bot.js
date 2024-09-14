@@ -13,7 +13,7 @@ fastify.post('/webhook', async (req, replay) => {
   replay.status(200).send('success');
 });
 
-export const startServer = async () => {
+const startServer = async () => {
   try {
     await fastify.listen({ port: 3000 });
   } catch (err) {
@@ -21,3 +21,5 @@ export const startServer = async () => {
     process.exit(1);
   }
 };
+
+export default startServer;
