@@ -1,4 +1,3 @@
 {
-  "src": "/(.*)",
-  "destination": "/api"
+  "rewrite": [{ "src": "/(.*)", "destination": "/api" }]
 }
