@@ -2,7 +2,7 @@
 
 import { bot, fastify } from './initialized.js';
 
-fastify.get('/webhook', async (req, reply) => {
+fastify.get('/', async (req, reply) => {
   reply.status(200).send('Webhook is working');
 });
 
