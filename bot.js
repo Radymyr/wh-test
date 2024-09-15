@@ -10,7 +10,7 @@ fastify.post('/webhook', async (req, replay) => {
   console.log(req.body);
   await bot.handleUpdate(req.body);
   bot.on('message', async (ctx) =>
-    ctx.reply(`||${ctx.message.text}||`, { parse_mode: 'MarkdownV2  ' })
+    ctx.reply(`||${ctx.message.text}||`, { parse_mode: 'MarkdownV2' })
   );
   replay.status(200).send('success');
 });
